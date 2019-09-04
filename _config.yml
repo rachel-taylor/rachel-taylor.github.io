@@ -1,11 +1,11 @@
 # Site settings
-author: Rachel T
-title: 
+author: Rachel Taylor
+title: The Journey
 header-img: img/home-bg.png
 email: rachmaybe@gmail.com
-copyright_name: Rachel T
+copyright_name: Rachel Taylor
 description: > # this means to ignore newlines until "baseurl:"
-  
+  Buckle up, it's a wild ride!
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  rachel-taylor
