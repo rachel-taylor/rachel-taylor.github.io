@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "I'm no quitter...am I? The CLI Project"
-date:       2019-10-24 04:50:24 +0000
+date:       2019-10-24 00:50:24 -0400
 permalink:  im_no_quitter_am_i_the_cli_project
 ---
 
