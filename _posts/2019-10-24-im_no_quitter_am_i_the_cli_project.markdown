@@ -1,24 +1,55 @@
 ---
 layout: post
-title:      "I'm no quitter...am I? The CLI Project"
+title:      "The CLI Project"
 date:       2019-10-24 00:50:24 -0400
 permalink:  im_no_quitter_am_i_the_cli_project
 ---
 
 
-Frustration. Confusion. Glee.
+The first project from FlatIron seemed daunting, like most new things it came with it's own challenges and rewards. You are tasked with scraping the information from a website, or using an API to pull the data.
 
-When I started my project I was already two weeks behind. Where to start first? Every idea that I had come up with, I couldn't figure out a real world application for. Was a real world application what I was looking for? I wanted to reach out to all of my classmates and ask what their project was about, but I can see the appeal of *not* telling someone. 
+Going into this project you want to stop and make a plan:
+1. What are you interested in? (This will make the project easier if it's something you like)
+2. Pick a website that isn't dependent on information you haven't learned yet (make sure your website isn't in javascript, etc)
+**OR**
+Pick an API that interests you
+3. Know what you want going in, use pseudocode to make it happen
 
-Frustration seems to be the intial emotion quite frequently. I'm quickly coming to terms with not being able to remember everything spur of the moment. So where am I? No topic. No code. A blank text editor. What now? I went through several topics in my head, hoping that one of them made sense to me and sounded interesting. I ended up with three different repositories because as I started one; another, better topic came along. 
+The hardest part of this project for me was figuring out where to start. After spending hours discussing with my study group, I decided to choose the Pokemon API. 
 
- I wanted it to be about gaming or medical; I figured if I was doing something I was interested in, the frustration would melt away. It sort of did? Creating the gem was easy thanks to Ruby's "magical ways". Now I had a title, a skeleton of what I needed; so now I just needed to make the code. Confusion. Where to start? Duh! I utilized previous lessons and videos to help flesh out what I thought I needed. I learned quickly how to interpret where my errors were telling me to go, not quite so quick at fixing it.
- 
- There were so many bumps in the road trying to get this completed.
+Beginning the code we use ***Initialize***. Intialize is part of the object-creation process in Ruby and it allows you to set the initial values for an object. 
+
+```
+ def initialize(num)
+    poke = open("https://pokeapi.co/api/v2/pokemon/#{num}/").read
+    @json = JSON.parse(poke)
+    @@all.push(self) 
+  end 
+```
+
+The initial values of this project, is the number of the Pokemon. This allows for the number to be assigned to the Pokemon after the instance creation. Once the number is given we are able to obtain the name of the pokemon. 
+
+```
+def get_name
+    @json["name"]
+  end 
+```
+
+Once we've obtained the name of the Pokemon any of the information in the API is now available to us. We are able to obtain the Pokemon's name, and any additional information the API has available for us to choose from.
+
+```
+def get_abilities
+    @json["abilities"].map do |ability|
+      ability["ability"]["name"]
+    end 
+  end 
+```
+In the beginning I am choosing to just obtain the abilties of each Pokemon available in the PokeDex. 
+
+Frustration. Confusion. Glee. Take a deep breath, you've got this. You've made it through the first project. 
 
 
-Glee! Guys! I made a thing! Eventually I'm going to have to use far more technical language than 'thething'. Which is likely soon because of the review! Even though it's felt like this entire project has lasted a lifetime because of everything going on, even though I wanted to quit so many times; nothing was better than seeing the correct text populate on the screen perfectly. 
 
-![](https://drive.google.com/open?id=1aBy_olEKC1tiwyGCD7RFvnF7fP9LyJ0_)
+
 
 
